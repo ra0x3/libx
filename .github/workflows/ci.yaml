@@ -41,7 +41,7 @@ jobs:
           python -m pip install --upgrade pip && \
             pip install pipenv && \
             pipenv install --deploy --dev && \
-            pipenv run black libx/*.py -l 80 --check
+            pipenv run black api/*.py -l 80 --check
 
   libx-js:
     runs-on: ubuntu-22.04
