@@ -56,6 +56,7 @@ boto = boto3.client(
     endpoint_url=r2_endpoint_url,
     aws_access_key_id=r2_access_key_id,
     aws_secret_access_key=r2_secret_access_key,
+    region_name="auto",
 )
 
 
