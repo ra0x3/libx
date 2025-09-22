@@ -5,10 +5,13 @@ import { Action } from '../store';
 
 function useDownload() {
   const dispatch = useDispatch();
-  const url = new URL(import.meta.env.VITE_SPOTIFY_REDIRECT_URI);
 
   const downloadFile = useCallback(
     async (accessToken: string) => {
+
+      const url = new URL(import.meta.env.VITE_SPOTIFY_REDIRECT_URI);
+
+      if (!accessToken) return;
       dispatch({
         type: Action.SET_DOWNLOAD_LOADING,
         payload: true,
@@ -71,7 +74,7 @@ function useDownload() {
         }, 10000);
       }
     },
-    [dispatch, url.host]
+    [dispatch]
   );
 
   return {

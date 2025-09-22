@@ -40,7 +40,7 @@ Install the backend dependencies
 ```sh
 # Navigate to the root directory
 cd libx/
-python -m venv venv && pip install pipenv && pipenv install --deploy
+python -m venv venv && source ./venv/bin/activate && pip install pipenv && pipenv install --deploy
 ```
 
 #### Tunnel
