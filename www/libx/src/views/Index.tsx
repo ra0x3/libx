@@ -71,7 +71,7 @@ function Index() {
   }, [loading, downloadURI]);
 
   return (
-    <BackgroundImg mediaURL="/assets/img/bg.webp">
+    <BackgroundImg mediaURL="/assets/img/bg.gif">
       <Content>
         <Flex w="80%" flexDirection="column" alignItems="center">
           <MusicTapeIcon height="3em" width="3em" />
