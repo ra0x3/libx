@@ -415,7 +415,10 @@ if __name__ == "__main__":
 
     CORS(
         app,
-        resources={r"/*": {"origins": ["*"]}},
+        resources={r"/api/*": {"origins": [
+            "https://www.libx.stream",
+            "https://libx.stream",
+        ]}},
         supports_credentials=True,
     )
 

@@ -30,7 +30,7 @@ function Index() {
       window.location.href = AUTH_URL;
     }
     if (accessToken) {
-      downloadFile(accessToken);
+      return downloadFile(accessToken);
     }
   };
 
@@ -69,7 +69,7 @@ function Index() {
     if (error) {
       toast.error(`Failed to download library.`);
     }
-  }, [loading, downloadURI]);
+  }, [loading, downloadURI, error]);
 
   return (
     <BackgroundImg mediaURL="/assets/img/bg.gif">
